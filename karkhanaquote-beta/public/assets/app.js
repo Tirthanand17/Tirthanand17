@@ -117,8 +117,18 @@ function recalc() {
   $('#sumMarkup').textContent = money(result.markupAmount);
   $('#sumSubtotal').textContent = money(result.subtotal);
   $('#sumGst').textContent = money(result.gstAmount);
-  $('#sumGrand').textContent = money(result.grandTotal);
+  const grand = $('#sumGrand');
+  grand.textContent = money(result.grandTotal);
+  grand.classList.remove('total-flash');
+  void grand.offsetWidth;
+  grand.classList.add('total-flash');
   $('#summaryMeta').textContent = `${draft.lines.length} item${draft.lines.length === 1 ? '' : 's'} • ${draft.status}`;
+  const itemKpi = $('#kpiItems');
+  const statusKpi = $('#kpiStatus');
+  const totalKpi = $('#kpiTotal');
+  if (itemKpi) itemKpi.textContent = `${draft.lines.length} item${draft.lines.length === 1 ? '' : 's'}`;
+  if (statusKpi) statusKpi.textContent = draft.status;
+  if (totalKpi) totalKpi.textContent = money(result.grandTotal);
   draft.updatedAt = new Date().toISOString();
   return result;
 }
@@ -206,7 +216,7 @@ function renderHistory() {
   }
   body.innerHTML = state.quotes.map((q) => {
     const total = calculateQuote(q).grandTotal;
-    return `<tr><td>${escapeHtml(q.ref)}</td><td>${escapeHtml(q.customer)}</td><td>${escapeHtml(q.status)}</td><td>${new Date(q.updatedAt).toLocaleDateString('en-IN')}</td><td class="num">${money(total)}</td><td class="actions-cell"><button data-load="${q.id}">Open</button><button data-copy="${q.id}">Copy</button><button class="danger" data-delete="${q.id}">Delete</button></td></tr>`;
+    return `<tr><td><strong>${escapeHtml(q.ref)}</strong></td><td>${escapeHtml(q.customer)}</td><td><span class="status-chip">${escapeHtml(q.status)}</span></td><td>${new Date(q.updatedAt).toLocaleDateString('en-IN')}</td><td class="num"><strong>${money(total)}</strong></td><td class="actions-cell"><button data-load="${q.id}">Open</button><button data-copy="${q.id}">Copy</button><button class="danger" data-delete="${q.id}">Delete</button></td></tr>`;
   }).join('');
   $$('[data-load]').forEach((b) => b.onclick = () => loadQuote(b.dataset.load));
   $$('[data-copy]').forEach((b) => b.onclick = () => duplicateQuote(b.dataset.copy));
