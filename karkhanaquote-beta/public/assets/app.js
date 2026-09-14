@@ -131,6 +131,22 @@ function recalc() {
   if (itemKpi) itemKpi.textContent = `${draft.lines.length} item${draft.lines.length === 1 ? '' : 's'}`;
   if (statusKpi) statusKpi.textContent = draft.status;
   if (totalKpi) totalKpi.textContent = money(result.grandTotal);
+
+  const grandTotal = Math.max(result.grandTotal, 0.01);
+  const costParts = {
+    Direct: result.linesCost,
+    Overhead: result.setupCost + result.overheadAmount,
+    Markup: result.markupAmount,
+    Gst: result.gstAmount,
+  };
+  for (const [key, value] of Object.entries(costParts)) {
+    const pct = Math.max(0, Math.min(100, (value / grandTotal) * 100));
+    const bar = document.getElementById(`bar${key}`);
+    const label = document.getElementById(`bar${key}Pct`);
+    if (bar) bar.style.width = `${pct.toFixed(1)}%`;
+    if (label) label.textContent = `${Math.round(pct)}%`;
+  }
+
   draft.updatedAt = new Date().toISOString();
   return result;
 }
@@ -147,8 +163,11 @@ function validateDraft() {
   if (!draft.ref.trim()) return 'Quote reference is required.';
   if (!draft.customer.trim()) return 'Customer name is required before saving.';
   for (const [i, line] of draft.lines.entries()) {
-    if (line.lengthMm <= 0 || line.widthMm <= 0 || line.thicknessMm <= 0) return `Item ${i+1}: dimensions must be greater than zero.`;
-    if (line.density <= 0) return `Item ${i+1}: density must be greater than zero.`;
+    const hasKnownWeight = nonNegative(line.weightOverrideKg) > 0;
+    if (!hasKnownWeight && (line.lengthMm <= 0 || line.widthMm <= 0 || line.thicknessMm <= 0)) {
+      return `Item ${i+1}: dimensions must be greater than zero unless known/CAD weight is provided.`;
+    }
+    if (!hasKnownWeight && line.density <= 0) return `Item ${i+1}: density must be greater than zero.`;
     if (line.quantity < 1) return `Item ${i+1}: quantity must be at least 1.`;
   }
   return null;
