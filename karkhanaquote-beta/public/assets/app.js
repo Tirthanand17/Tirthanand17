@@ -9,12 +9,13 @@ function rateForMaterial(key) {
   if (key === 'ss304') return nonNegative(state.settings.ssRate ?? 220);
   if (key === 'aluminium') return nonNegative(state.settings.aluminiumRate ?? 260);
   if (key === 'ms') return nonNegative(state.settings.msRate ?? 70);
+  if (key === 'brass') return nonNegative(state.settings.brassRate ?? 0);
   return 0;
 }
 
 const defaultLine = () => ({
   id: makeId('line'), description: 'Laser cut part', materialKey: 'ms', density: 7850,
-  lengthMm: 1000, widthMm: 1000, thicknessMm: 1, quantity: 1,
+  lengthMm: 1000, widthMm: 1000, thicknessMm: 1, weightOverrideKg: 0, quantity: 1,
   materialRatePerKg: rateForMaterial('ms'), wastePct: nonNegative(state.settings.wastePct ?? 10),
   cutLengthMm: 4000, cutRatePerM: nonNegative(state.settings.cutRatePerM ?? 10),
   pierces: 4, pierceRate: nonNegative(state.settings.pierceRate ?? 1), secondaryOps: 0,
@@ -46,6 +47,7 @@ function lineHtml(line, index) {
       <label>Width mm<input data-f="widthMm" type="number" min="0" step="0.01" value="${line.widthMm}"></label>
       <label>Thickness mm<input data-f="thicknessMm" type="number" min="0" step="0.01" value="${line.thicknessMm}"></label>
       <label>Quantity<input data-f="quantity" type="number" min="1" step="1" value="${line.quantity}"></label>
+      <label>Known weight kg / pc<input data-f="weightOverrideKg" type="number" min="0" step="0.001" value="${line.weightOverrideKg ?? 0}" placeholder="0 = auto"></label>
       <label>Material ₹/kg<input data-f="materialRatePerKg" type="number" min="0" step="0.01" value="${line.materialRatePerKg}"></label>
       <label>Waste %<input data-f="wastePct" type="number" min="0" step="0.01" value="${line.wastePct}"></label>
       <label>Cut path mm / piece<input data-f="cutLengthMm" type="number" min="0" step="0.01" value="${line.cutLengthMm}"></label>
@@ -108,7 +110,7 @@ function recalc() {
   result.lineResults.forEach((r, i) => {
     const line = draft.lines[i];
     const target = document.getElementById(`result-${line.id}`);
-    if (target) target.textContent = `${r.totalWeightKg.toFixed(3)} kg • Direct cost ${money(r.directCost)}`;
+    if (target) target.textContent = `${r.totalWeightKg.toFixed(3)} kg${r.weightOverrideKg > 0 ? ' • known/CAD weight' : ' • calculated weight'} • Direct cost ${money(r.directCost)}`;
   });
   $('#sumLines').textContent = money(result.linesCost);
   $('#sumSetup').textContent = money(result.setupCost);
@@ -265,7 +267,7 @@ $('#newQuote').onclick = newQuote;
 $('#exportCsv').onclick = exportCsv;
 $('#printQuoteBtn').onclick = () => { renderPrintHeader(); window.print(); };
 const settingFields = {
-  companyName: 'companyName', gstin: 'gstin', msRate: 'msRate', ssRate: 'ssRate', aluminiumRate: 'aluminiumRate',
+  companyName: 'companyName', gstin: 'gstin', msRate: 'msRate', ssRate: 'ssRate', aluminiumRate: 'aluminiumRate', brassRate: 'brassRate',
   wastePct: 'defaultWastePct', cutRatePerM: 'defaultCutRate', pierceRate: 'defaultPierceRate',
   overheadPct: 'defaultOverheadPct', markupPct: 'defaultMarkupPct',
 };
