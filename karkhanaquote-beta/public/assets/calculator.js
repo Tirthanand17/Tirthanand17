@@ -24,6 +24,7 @@ export function calculateLine(raw = {}) {
   const widthMm = nonNegative(raw.widthMm);
   const thicknessMm = nonNegative(raw.thicknessMm);
   const density = nonNegative(raw.density);
+  const weightOverrideKg = nonNegative(raw.weightOverrideKg);
   const quantity = positiveInt(raw.quantity, 1);
   const materialRatePerKg = nonNegative(raw.materialRatePerKg);
   const wastePct = nonNegative(raw.wastePct);
@@ -34,7 +35,8 @@ export function calculateLine(raw = {}) {
   const secondaryOps = nonNegative(raw.secondaryOps);
 
   const volumeM3PerPiece = lengthMm * widthMm * thicknessMm * 1e-9;
-  const weightPerPieceKg = volumeM3PerPiece * density;
+  const calculatedWeightPerPieceKg = volumeM3PerPiece * density;
+  const weightPerPieceKg = weightOverrideKg > 0 ? weightOverrideKg : calculatedWeightPerPieceKg;
   const totalWeightKg = weightPerPieceKg * quantity;
   const materialBase = totalWeightKg * materialRatePerKg;
   const materialCost = materialBase * (1 + wastePct / 100);
@@ -44,6 +46,8 @@ export function calculateLine(raw = {}) {
 
   return {
     weightPerPieceKg,
+    calculatedWeightPerPieceKg,
+    weightOverrideKg,
     totalWeightKg,
     materialCost,
     cuttingCost,
