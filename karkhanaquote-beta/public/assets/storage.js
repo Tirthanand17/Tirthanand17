@@ -1,7 +1,7 @@
 const KEY = 'karkhanaquote:v1';
 
 function blankState() {
-  return { quotes: [], rateCards: [], settings: { companyName: '', gstin: '', msRate: 70, ssRate: 220, aluminiumRate: 260, wastePct: 10, cutRatePerM: 10, pierceRate: 1, overheadPct: 8, markupPct: 25, gstPct: 18 } };
+  return { quotes: [], rateCards: [], settings: { companyName: '', gstin: '', msRate: 70, ssRate: 220, aluminiumRate: 260, brassRate: 0, wastePct: 10, cutRatePerM: 10, pierceRate: 1, overheadPct: 8, markupPct: 25, gstPct: 18 } };
 }
 
 export function loadState() {
