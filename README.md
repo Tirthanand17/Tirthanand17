@@ -2,7 +2,7 @@
 - 👀 I’m interested in Data Science/Machine Learning/AI/Data
 - 🌱 I’m currently learning Machine Learning
 - 💞️ I’m looking to collaborate on ..Data
-- 📫 How to reach me tirthanadsingh@gmail.com
+- 📫 How to reach me tirthanadsingh123@gmail.com
 - 😄 Pronouns: 
 - ⚡ Fun fact: ...
 
