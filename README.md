@@ -22,6 +22,29 @@ I build practical data and software projects with an emphasis on clear problem-s
 - 🧪 I prefer projects that show working code, measurable results, tests, reproducible setup, or a live/demo surface
 - 🚀 Open to data science, ML, analytics, Python automation, and AI opportunities
 
+
+## 💼 Available for Paid Work
+
+I take on small-to-medium remote projects where the deliverable can be clearly scoped, tested, and handed over cleanly.
+
+**Best-fit services**
+
+- Python automation for repetitive office/data workflows
+- Excel/CSV cleaning, deduplication, normalization, merging, and reporting
+- OCR/PDF processing and document conversion workflows
+- Data analysis, KPI reporting, and dashboard-ready dataset preparation
+- Small ML/AI prototypes with reproducible code and evaluation
+- Bug fixes, test coverage, and workflow reliability improvements in Python projects
+
+**Typical fixed-scope starter work**
+
+- Spreadsheet cleanup/automation: from **$25**
+- OCR/PDF processing task: from **$20**
+- Python automation script: from **$40**
+- Data analysis/reporting task: from **$50**
+
+For project details, see **[Services & Work Requests](SERVICES.md)** or open a **[Paid Work Request](../../issues/new?template=paid-work.yml)**.
+
 ## ⭐ Selected Projects
 
 | Project | What it demonstrates | Stack / Evidence |
