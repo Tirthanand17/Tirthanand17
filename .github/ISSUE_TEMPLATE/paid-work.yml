@@ -1,0 +1,52 @@
+name: Paid Work Request
+description: Request a quote for Python, data, automation, OCR/PDF, or analytics work
+title: "[Work Request] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your interest. Please share only non-sensitive information here. Do not post passwords, API keys, private datasets, IDs, or confidential client files.
+  - type: dropdown
+    id: service
+    attributes:
+      label: Service
+      options:
+        - Python automation
+        - Excel / CSV processing
+        - OCR / PDF processing
+        - Data analysis / reporting
+        - Machine learning / AI prototype
+        - Python bug fix / testing
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What do you need done?
+      description: Describe the current manual process or problem and the desired result.
+    validations:
+      required: true
+  - type: textarea
+    id: input_output
+    attributes:
+      label: Input and expected output
+      description: Describe file types, columns, examples, or expected deliverables without sharing confidential data.
+    validations:
+      required: true
+  - type: input
+    id: deadline
+    attributes:
+      label: Deadline
+      placeholder: e.g. 3 days / 15 Oct 2026
+  - type: input
+    id: budget
+    attributes:
+      label: Approximate budget
+      placeholder: e.g. $50
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: How will you know the work is complete?
+      description: List the key acceptance criteria.
