@@ -2,7 +2,7 @@
 
 # Tirthanand Singh
 
-### MSc Data Science · Machine Learning · AI Systems · Data Engineering
+### AI/ML Engineer · Data Science · NLP · Deep Learning · Automation
 
 I build end-to-end data and AI projects with measurable evaluation, reproducible workflows, APIs, dashboards, testing, and clear technical documentation.
 
@@ -16,7 +16,7 @@ I build end-to-end data and AI projects with measurable evaluation, reproducible
 ## 👨‍💻 Profile
 
 - 🎓 MSc Data Science student
-- 🧠 Focus: **Machine Learning, AI, Data Analytics, NLP, data engineering, and automation**
+- 🧠 Focus: **AI/ML engineering, LLM/RAG, NLP, Deep Learning, Data Science, and intelligent automation**
 - 🐍 Core stack: **Python, pandas, NumPy, scikit-learn, XGBoost, FastAPI, SQL, PostgreSQL**
 - 🌐 Application work: **Next.js, Django, Streamlit, APIs, GitHub Actions**
 - 📊 Analytics: **Power BI, Tableau, Excel, Matplotlib, Seaborn**
@@ -26,9 +26,11 @@ I build end-to-end data and AI projects with measurable evaluation, reproducible
 
 | Priority | Project | Why it stands out |
 |---|---|---|
-| **1** | **[Cricket Score Prediction using Machine Learning](https://github.com/Tirthanand17/Cricket-Score-Prediction-By-Using-Machine-Learning)** | Full T20/ODI/Test ML platform with leakage-safe evaluation, FastAPI + Next.js, frozen holdouts, uncertainty handling, CI, and prospective real-match evidence. T20 holdout MAE: **16.74 runs**. |
-| **2** | **[Financial Intelligence Agent](https://github.com/Tirthanand17/financial-intelligence-agent)** | Source-grounded financial intelligence architecture with PostgreSQL, Qdrant, S3-compatible evidence storage, provenance, claim versioning, cross-source verification, capacity gates, and fail-closed automation. |
-| **3** | **[AI Social Media Automation Platform](https://github.com/Tirthanand17/AI_Social_Media_Project)** | Applied AI/ML system covering NLP, engagement prediction, scheduling, analytics, dashboards, moderation, multi-platform adapters, CI, and dry-run-safe publishing. |
+| **1** | **[Tool-Using AI Agent Workflow Platform](https://github.com/Tirthanand17/ai-agent-workflow-platform)** | Production-style AI-agent foundation with planning, safe tool routing, session memory, guardrails, tool-selection evaluation, FastAPI, Docker, pytest, and passing GitHub Actions CI. |
+| **2** | **[Document Intelligence RAG Platform](https://github.com/Tirthanand17/document-intelligence-rag-platform)** | NLP/RAG system with document ingestion, chunking, vector retrieval, cited answers, retrieval evaluation, optional transformer embeddings, FastAPI, Docker, pytest, and passing CI. |
+| **3** | **[Cricket Score Prediction using Machine Learning](https://github.com/Tirthanand17/Cricket-Score-Prediction-By-Using-Machine-Learning)** | Full T20/ODI/Test ML platform with leakage-safe evaluation, FastAPI + Next.js, frozen holdouts, uncertainty handling, CI, and prospective real-match evidence. T20 holdout MAE: **16.74 runs**. |
+| **4** | **[Financial Intelligence Agent](https://github.com/Tirthanand17/financial-intelligence-agent)** | Source-grounded financial intelligence architecture with PostgreSQL, Qdrant, S3-compatible evidence storage, provenance, claim versioning, cross-source verification, capacity gates, and fail-closed automation. |
+| **5** | **[AI Social Media Automation Platform](https://github.com/Tirthanand17/AI_Social_Media_Project)** | Applied AI/ML system covering NLP, engagement prediction, scheduling, analytics, dashboards, moderation, multi-platform adapters, CI, and dry-run-safe publishing. |
 
 ➡️ **[View detailed project evidence and reviewer notes](PROJECTS.md)**
 
@@ -78,7 +80,7 @@ I build end-to-end data and AI projects with measurable evaluation, reproducible
 
 ## 📫 Opportunities & Contact
 
-I’m open to **Data Science, Machine Learning, AI, Data Analyst, Python Automation, and related internship/job opportunities**.
+I’m open to **AI/ML Engineering, LLM/RAG, NLP, Deep Learning, Data Science, AI Agent, and Python Automation opportunities**.
 
 **Email:** [tirthanadsingh123@gmail.com](mailto:tirthanadsingh123@gmail.com)  
 **GitHub:** [github.com/Tirthanand17](https://github.com/Tirthanand17)  
