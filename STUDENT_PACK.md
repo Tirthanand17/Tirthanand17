@@ -18,7 +18,7 @@ This file tracks student benefits that can support my Data Science, Machine Lear
 | Benefit | Current pack offer | Best use |
 |---|---|---|
 | Microsoft Azure | 25+ services + $100 credit for eligible students 18+ | **Claim in progress** — deploy APIs, databases, dashboards, AI demos |
-| JetBrains | Free student subscription, renewable annually | PyCharm Professional and other IDEs |
+| JetBrains | Free student subscription, renewable annually | **Claim in progress** — PyCharm Professional and other IDEs |
 | MongoDB | Student pack benefit/credit when offered | AI-agent/app databases |
 | Deepnote | Student/cloud notebook benefit | Data science and ML notebooks |
 | Heroku | $13/month credit for 24 months | Easy Python/FastAPI/Django deployment |
