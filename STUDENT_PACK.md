@@ -17,11 +17,11 @@ This file tracks student benefits that can support my Data Science, Machine Lear
 
 | Benefit | Current pack offer | Best use |
 |---|---|---|
-| Microsoft Azure | 25+ services + $100 credit for eligible students 18+ | **PENDING — no activation confirmation verified yet** |
-| JetBrains | Free student subscription, renewable annually | **PENDING — no activation confirmation verified yet** |
-| MongoDB | Student pack benefit/credit when offered | AI-agent/app databases |
+| Microsoft Azure | 25+ services + $100 credit for eligible students 18+ | **IN PROGRESS — GitHub OAuth completed; Microsoft email OTP verification is the current blocker; no card requested** |
+| JetBrains | Free student subscription, renewable annually | **IN PROGRESS — official free Student Pack application form reached; GitHub verification next; no card required** |
+| MongoDB | $50 Atlas credit + Compass/University/certification offer | **SKIPPED FOR NOW — current redemption requires a valid card or PayPal, which is not allowed under my no-payment-method rule** |
 | Deepnote | Student/cloud notebook benefit | Data science and ML notebooks |
-| Heroku | $13/month credit for 24 months | Easy Python/FastAPI/Django deployment |
+| Heroku | $13/month credit for 24 months | **SKIPPED FOR NOW — current redemption requires a valid credit/debit card, which is not allowed under my no-payment-method rule** |
 | 1Password | Free for 1 year incl. Developer Tools | Secrets, API keys, developer credentials |
 | Appwrite | Education plan for six months | Backend/hosting for apps |
 | Datadog | Student monitoring offer | Logs, metrics, deployed service monitoring |
