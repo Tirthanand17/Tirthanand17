@@ -10,15 +10,15 @@ This file tracks student benefits that can support my Data Science, Machine Lear
 |---|---|---|---|
 | GitHub Pro | Free while eligible as a student | Verify/activate in GitHub Education | Portfolio, private/public repositories, developer features |
 | GitHub Codespaces | Free Pro-level access | Verify/activate in GitHub Education | Cloud development for large AI/ML repositories |
-| GitHub Copilot Student | Student plan for verified students | Claim first | Coding assistance, tests, refactors, Python/FastAPI/ML work |
+| GitHub Copilot Student | Student plan for verified students | **CLAIMED / ACTIVE** | Coding assistance, tests, refactors, Python/FastAPI/ML work |
 | GitHub Pages | GitHub-hosted sites | Available when needed | Portfolio and project documentation |
 
 ## High-Value Benefits — Claim When Needed
 
 | Benefit | Current pack offer | Best use |
 |---|---|---|
-| Microsoft Azure | 25+ services + $100 credit for eligible students 18+ | **Claim in progress** — deploy APIs, databases, dashboards, AI demos |
-| JetBrains | Free student subscription, renewable annually | **Claim in progress** — PyCharm Professional and other IDEs |
+| Microsoft Azure | 25+ services + $100 credit for eligible students 18+ | **PENDING — no activation confirmation verified yet** |
+| JetBrains | Free student subscription, renewable annually | **PENDING — no activation confirmation verified yet** |
 | MongoDB | Student pack benefit/credit when offered | AI-agent/app databases |
 | Deepnote | Student/cloud notebook benefit | Data science and ML notebooks |
 | Heroku | $13/month credit for 24 months | Easy Python/FastAPI/Django deployment |
